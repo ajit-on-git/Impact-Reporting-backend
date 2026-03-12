@@ -15,7 +15,7 @@ const app = express();
 // Correct origin without trailing slash
 app.use(
   cors({
-    origin: "https://impact-reporting-frontend.vercel.app", // no trailing slash
+    origin:  "https://impact-reporting-frontend-1a7grb21s-ajit-on-gits-projects.vercel.app", // no trailing slash
     methods: ["GET", "POST"],
     credentials: true, // if needed
   }),
