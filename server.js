@@ -12,7 +12,13 @@ const app = express();
 // ---------------------
 // Middleware
 // ---------------------
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://impact-reporting-frontend.vercel.app/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // if you need cookies
+  }),
+);
 app.use(express.json());
 
 // ---------------------
