@@ -12,13 +12,15 @@ const app = express();
 // ---------------------
 // Middleware
 // ---------------------
+// Correct origin without trailing slash
 app.use(
   cors({
-    origin: "https://impact-reporting-frontend.vercel.app/",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // if you need cookies
+    origin: "https://impact-reporting-frontend.vercel.app", // no trailing slash
+    methods: ["GET", "POST"],
+    credentials: true, // if needed
   }),
 );
+
 app.use(express.json());
 
 // ---------------------
